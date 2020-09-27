@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+}
+
+.title-text {
+    font-family: 'Merriweather', serif;
+    font-size: 12vh;
+    width: 60%;
+}
+
+.bio-text {
+    font-size: 24px;
+    width: 60%;
+}
+
+.title, .bio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bio-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
