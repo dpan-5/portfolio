@@ -4,13 +4,13 @@ html, body {
 
 .title-text {
     font-family: 'Merriweather', serif;
-    font-size: 12vh;
-    width: 60%;
+    font-size: 13vh;
+    width: 65%;
 }
 
 .bio-text {
-    font-size: 24px;
-    width: 60%;
+    font-size: 28px;
+    width: 65%;
 }
 
 .title, .bio {
