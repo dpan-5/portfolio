@@ -26,3 +26,16 @@ html, body {
     flex-direction: column;
     height: 100%;
 }
+
+.socials-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+
+.socials-icon {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
