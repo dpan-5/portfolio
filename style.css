@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     /* background-color: rgba(14, 136, 250, 0.075); */
+    scroll-snap-type: y mandatory;
 }
 
 .title-text {
@@ -31,11 +32,15 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30%;
+    height: 100vh;
 }
 
 .socials-icon {
     height: 50px;
     width: 50px;
     margin: 10px;
+}
+
+.bio-main, .socials-main {
+    scroll-snap-align: start;
 }
