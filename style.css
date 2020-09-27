@@ -5,12 +5,12 @@ html, body {
 
 .title-text {
     font-family: 'Merriweather', serif;
-    font-size: 13vh;
+    font-size: 7.5vw;
     width: 65%;
 }
 
 .bio-text {
-    font-size: 28px;
+    font-size: 4vmin;
     width: 65%;
 }
 

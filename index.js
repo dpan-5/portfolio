@@ -11,3 +11,5 @@ setInterval(() => {
     cursor = true;
     }
 }, speed);
+
+// Scroll effect
