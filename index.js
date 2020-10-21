@@ -1,13 +1,12 @@
 // Blinking cursor effect
-var cursor = true;
-var speed = 500;
-
+let cursor = true;   
+ 
 setInterval(() => {
     if(cursor) {
-    document.getElementById('cursor').style.opacity = 0;
-    cursor = false;
-    }else {
-    document.getElementById('cursor').style.opacity = 1;
-    cursor = true;
+        document.getElementById('cursor').style.opacity = 0;
+        cursor = false;
+    } else {
+        document.getElementById('cursor').style.opacity = 1;
+        cursor = true;
     }
-}, speed);
+}, 500);

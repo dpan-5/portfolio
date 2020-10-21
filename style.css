@@ -1,8 +1,14 @@
 html, body {
     height: 100%;
-    /* background-color: rgba(14, 136, 250, 0.075); */
+    background-color: rgb(255, 254, 246);
     scroll-snap-type: y mandatory;
 }
+
+.bio-main, .socials-main, .projects-main {
+    scroll-snap-align: start;
+}
+
+/* BIO STYLING */
 
 .title-text {
     font-family: 'Merriweather', serif;
@@ -25,8 +31,37 @@ html, body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
 }
+
+/* PROJECTS STYLING */
+
+.projects-main {
+    /* display: flex;
+    align-items: center; */
+    height: 100vh;
+}
+
+.projects-title {
+    justify-content: center;
+}
+
+.project-title-text {
+    font-family: 'Merriweather', serif;
+    font-size: 5vw;
+    /* width: 65%; */
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+}
+
+.project {
+    margin: 1rem;
+}
+
+/* SOCIALS STYLING */
 
 .socials-main {
     display: flex;
@@ -39,8 +74,11 @@ html, body {
     height: 50px;
     width: 50px;
     margin: 10px;
+    transition: 0.3s ease;
 }
 
-.bio-main, .socials-main, .projects-main {
-    scroll-snap-align: start;
+#linkedin-icon:hover, #github-icon:hover, #cv-icon:hover {
+    transform: scale(1.5, 1.5);
 }
+
+
