@@ -41,6 +41,6 @@ html, body {
     margin: 10px;
 }
 
-.bio-main, .socials-main {
+.bio-main, .socials-main, .projects-main {
     scroll-snap-align: start;
 }
