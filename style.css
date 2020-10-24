@@ -1,6 +1,5 @@
 html, body {
     height: 100%;
-    background-color: rgb(255, 254, 246);
     scroll-snap-type: y mandatory;
 }
 
@@ -42,23 +41,25 @@ html, body {
     height: 100vh;
 }
 
-.projects-title {
-    justify-content: center;
-}
-
 .project-title-text {
     font-family: 'Merriweather', serif;
-    font-size: 5vw;
-    /* width: 65%; */
+    font-size: 6.5vw;
+    text-align: center;
 }
 
 .project-container {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 .project {
     margin: 1rem;
+}
+
+img {
+    height: auto;
+    width: 100%;
 }
 
 /* SOCIALS STYLING */
