@@ -43,14 +43,16 @@ html, body {
 
 .project-title-text {
     font-family: 'Merriweather', serif;
-    font-size: 6.5vw;
+    font-size: 4.5vw;
     text-align: center;
+    padding-top: 3rem;
 }
 
 .project-container {
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
+    height: 80%;
 }
 
 .project {
@@ -67,8 +69,10 @@ img {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    margin: 10px;
+    margin: 2rem;
     border-radius: 5px;
+    height: auto;
+    width: 25%;
 }
   
 /* On mouse-over, add a deeper shadow */
@@ -82,18 +86,17 @@ img {
 }
 
 .project-name {
-    /* font-family: 'Merriweather', serif; */
-    font-size: 1.5vw;
+    font-family: 'Merriweather', serif;
+    font-size: 1.8vw;
     font-weight: 600;
     text-align: center;
 }
 
-
-
-
-
-
-
+.project-desc {
+    font-family: 'Merriweather', serif;
+    font-size: 0.9vw;
+    text-align: center;
+}
 
 
 /* SOCIALS STYLING */
