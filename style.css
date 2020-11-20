@@ -2,6 +2,7 @@ html,
 body {
   height: 100%;
   /* scroll-snap-type: y mandatory; */
+  /* background: black; */
 }
 
 a {
@@ -16,6 +17,20 @@ a {
 }
 
 /* BIO STYLING */
+
+.dp-header-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.dp-header-background svg {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    z-index: -10;
+  }
 
 .title-text {
   /* font-family: 'Merriweather', serif; */
@@ -98,6 +113,7 @@ a {
   /* display: flex;
     align-items: center; */
   /* height: 100vh; */
+  margin-top: 150px;
 }
 
 .project-title-text {
@@ -193,9 +209,8 @@ a {
   width: 100%;
   min-height: 600px;
   min-height: 100vh;
-  margin-top: 250px;
+  margin-top: 200px;
   color: #252525;
-  font-size: 16px;
 }
 
 .dp-social {
