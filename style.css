@@ -1,224 +1,343 @@
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
+  /* scroll-snap-type: y mandatory; */
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.bio-main, .socials-main, .projects-main {
-    scroll-snap-align: start;
+.bio-main,
+.socials-main,
+.projects-main 
+{
+  /* scroll-snap-align: start; */
 }
 
 /* BIO STYLING */
 
 .title-text {
-    /* font-family: 'Merriweather', serif; */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 7.5vw;
-    width: 65%;
-    font-weight: 500;
+  /* font-family: 'Merriweather', serif; */
+  font-family: "Montserrat", sans-serif;
+  font-size: 7.5vw;
+  width: 65%;
+  font-weight: 500;
 }
 
 .typewriter {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .05em solid black; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.05em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 
-    animation: 
-      typing 2.5s steps(25, end),
-      blink-caret 1s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 65% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black; }
-  }
+  animation: typing 1.75s steps(25, end), blink-caret 1s step-end infinite;
+}
 
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}
 
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
 
 .bio-text {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    font-size: 4vmin;
-    width: 65%;
-    
-    visibility: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 4vmin;
+  width: 65%;
 
-    animation: 4s fadein;
-    animation-fill-mode: forwards;
+  visibility: hidden;
 
+  animation: 3.2s fadein;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadein {
-    70% { visibility: hidden; opacity: 0; }
-    100% { visibility: visible; opacity: 1; }
+  70% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
-.title, .bio {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.title,
+.bio {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .bio-main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 /* PROJECTS STYLING */
 
 .projects-main {
-    /* display: flex;
+  /* display: flex;
     align-items: center; */
-    height: 100vh;
+  /* height: 100vh; */
 }
 
 .project-title-text {
-    /* font-family: 'Merriweather', serif; */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4.5vw;
-    text-align: center;
-    padding-top: 3rem;
+  /* font-family: 'Merriweather', serif; */
+  font-family: "Montserrat", sans-serif;
+  font-size: 6.5vh;
+  text-align: center;
+  padding-top: 3rem;
+  font-weight: 500;
+  padding-bottom: 3rem;
 }
 
-.project-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80%;
+.masonry-wrapper {
+  padding: 1.5em;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.project {
-    margin: 1rem;
+.masonry {
+  columns: 1;
+  column-gap: 10px;
 }
 
-img {
-    height: auto;
-    width: 100%;
-    border-radius: 5px 5px 0 0;
+.masonry-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 10px;
+  max-width: 100%;
+  height: auto;
 }
 
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    margin: 2rem;
-    border-radius: 5px;
-    height: auto;
-    width: 25%;
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    columns: 2;
+  }
 }
+
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    columns: 3;
+  }
+}
+
+.masonry-item,
+.masonry-content {
+  overflow: hidden;
+}
+
+.masonry-item {
+  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.3));
+}
+
+.project-info {
+  position: absolute;
+  top: 0;
+  padding: 1.5em;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.1em;
+  background-color: rgba(82, 207, 170, 0.9);
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
   
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-  
-/* Add some padding inside the card container */
-.project {
-    padding: 2px 16px;
 }
 
-.project-name {
-    font-family: 'Merriweather', serif;
-    font-size: 1.8vw;
-    font-weight: 600;
-    text-align: center;
+.masonry-item:hover .project-info {
+  visibility: visible;
+  opacity: 1;
 }
 
-.project-desc {
-    font-family: 'Merriweather', serif;
-    font-size: 0.9vw;
-    text-align: center;
+.project-info h3 {
+  margin: 0 0 0.2em;
+  font-size: 2em;
+  font-weight: 700;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
-
+.project-info p {
+  margin: 0.2em 0 0;
+  font-size: 1em;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
 
 /* SOCIALS STYLING */
 
-.socials-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
 .dp-footer {
-    position: relative;
-    display: flex;
-    width: 100%;
-    min-height: 600px;
-    min-height: 100vh;
-    margin-top: 250px;
-    color: #252525;
-    font-size: 16px;
-}
-
-.dp-footer-background svg {
-    position: absolute;
-    width: 100%;
-    height: 120%;
-    top: -20%;
-    left: 0;
-    z-index: -10;
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 600px;
+  min-height: 100vh;
+  margin-top: 250px;
+  color: #252525;
+  font-size: 16px;
 }
 
 .dp-social {
-    margin: auto;
-    text-align: center;
-    font-size: 1em;
+  margin: auto;
+  text-align: center;
+  font-size: 1em;
 }
 
-svg {
-    width: 5rem;
-    height: 5rem;
-}
-
-.dp-social-button-label {
-    position: relative;
-    margin-top: 1em;
-    z-index: 2;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    visibility: hidden;
-    opacity: 0;
-
-    transition: opacity .2s, visibility .2s;
-
+.socials-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .dp-socials-a {
-    margin: 1rem;
-    padding: 3rem;
-    transition: background-color .4s;
+  position: relative;
+  display: inline-block;
+  width: 24%;
+  padding: 3.75em 1.25em;
+  margin: 0 0.2%;
+
+  transition: background-color 0.4s;
 }
 
 .dp-socials-a:hover .dp-social-button-label {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .dp-socials-a:hover {
-    background-color: rgb(65, 131, 196);
+  background-color: rgb(65, 131, 196);
 }
 
 .github:hover {
-    background-color: #AD5C51;
+  background-color: #ad5c51;
 }
 
 .cv:hover {
-    background-color: rgb(43, 41, 41);
+  background-color: rgb(43, 41, 41);
 }
 
+svg {
+  width: 5rem;
+  height: 5rem;
+}
 
+.dp-social-button-label {
+  position: relative;
+  margin-top: 1em;
+  z-index: 2;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  visibility: hidden;
+  opacity: 0;
 
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.dp-footer-background svg {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  top: -20%;
+  left: 0;
+  z-index: -10;
+}
+
+@media screen and (max-width: 2000px) {
+  .dp-social,
+  .dp-text {
+    width: 68%;
+  }
+  .dp-text {
+    font-size: 2.4em;
+  }
+  .dp-project-info {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .dp-social,
+  .dp-text {
+    width: 80%;
+  }
+  .dp-text {
+    font-size: 2.4em;
+  }
+  .dp-project {
+    width: 49%;
+    margin: 0.5%;
+  }
+  .dp-social-button-label {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .dp-social,
+  .dp-text {
+    width: 90%;
+  }
+  .dp-text {
+    font-size: 1.6em;
+    font-weight: 500;
+  }
+  .dp-social-button-label {
+    font-size: 0.7em;
+  }
+  .dp-dpader-links {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .dp-text {
+    font-size: 1.4em;
+  }
+  .dp-project-info {
+    font-size: 0.7em;
+    padding: 1em;
+  }
+  .dp-social {
+    padding: 3em 0;
+  }
+  .dp-social-button {
+    display: inline-block;
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .dp-text {
+    font-size: 1.1em;
+  }
+  .dp-project {
+    width: 100%;
+    margin: 0.5% 0;
+  }
+  .dp-project-info {
+    font-size: 1em;
+  }
+  .dp-social-button {
+    width: 40%;
+  }
+}
