@@ -1,6 +1,9 @@
 html, body {
     height: 100%;
-    scroll-snap-type: y mandatory;
+}
+
+a {
+    text-decoration: none;
 }
 
 .bio-main, .socials-main, .projects-main {
@@ -10,12 +13,20 @@ html, body {
 /* BIO STYLING */
 
 .title-text {
-    font-family: 'Merriweather', serif;
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Montserrat', sans-serif;
     font-size: 7.5vw;
     width: 65%;
+    font-weight: 500;
+}
+
+#cursor {
+    font-weight: 200;
 }
 
 .bio-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
     font-size: 4vmin;
     width: 65%;
 }
@@ -42,7 +53,8 @@ html, body {
 }
 
 .project-title-text {
-    font-family: 'Merriweather', serif;
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Montserrat', sans-serif;
     font-size: 4.5vw;
     text-align: center;
     padding-top: 3rem;
@@ -108,15 +120,73 @@ img {
     height: 100vh;
 }
 
-.socials-icon {
-    height: 50px;
-    width: 50px;
-    margin: 10px;
-    transition: 0.3s ease;
+.dp-footer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 600px;
+    min-height: 100vh;
+    margin-top: 250px;
+    color: #252525;
+    font-size: 16px;
 }
 
-#linkedin-icon:hover, #github-icon:hover, #cv-icon:hover {
-    transform: scale(1.5, 1.5);
+.dp-footer-background svg {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    top: -20%;
+    left: 0;
+    z-index: -10;
 }
+
+.dp-social {
+    margin: auto;
+    text-align: center;
+    font-size: 1em;
+}
+
+svg {
+    width: 5rem;
+    height: 5rem;
+}
+
+.dp-social-button-label {
+    position: relative;
+    margin-top: 1em;
+    z-index: 2;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity .2s, visibility .2s;
+
+}
+
+.dp-socials-a {
+    margin: 1rem;
+    padding: 3rem;
+    transition: background-color .4s;
+}
+
+.dp-socials-a:hover .dp-social-button-label {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dp-socials-a:hover {
+    background-color: rgb(65, 131, 196);
+}
+
+.github:hover {
+    background-color: #AD5C51;
+}
+
+.cv:hover {
+    background-color: rgb(43, 41, 41);
+}
+
 
 
