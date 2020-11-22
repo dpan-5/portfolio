@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-  $(window).scrollTop(0);
+  // $(window).scrollTop(0);
+  $(".dp-header-background").css("opacity", 0);
 
   $(window).scroll(function(){
     
