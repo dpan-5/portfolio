@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   // $(window).scrollTop(0);
   $(".dp-header-background").css("opacity", 0);
+  console.log("updated");
 
   $(window).scroll(function(){
     
